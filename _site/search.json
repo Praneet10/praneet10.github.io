@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome 👋\nHi, I’m Praneet Jaswani.\nThis site showcases my R projects analyzing data from the Haryana Right to Service Commission (HRTS)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About Me\nI am an Economics graduate interested in data analysis, public policy, and governance.\nTools I use: R, ggplot2, dplyr, Quarto.\n(Add email / CV link here when ready.)"
+  },
+  {
+    "objectID": "HRTS_Data.html",
+    "href": "HRTS_Data.html",
+    "title": "HRTS Data Projects",
+    "section": "",
+    "text": "This page will host my HRTS analyses (plots and write-ups). For now, it’s a placeholder for structure.\n\n\n(Placeholder — no code yet)\n\n\n\n(Placeholder — no code yet)"
+  },
+  {
+    "objectID": "HRTS_Data.html#project-1-appeal-heatmap",
+    "href": "HRTS_Data.html#project-1-appeal-heatmap",
+    "title": "HRTS Data Projects",
+    "section": "",
+    "text": "(Placeholder — no code yet)"
+  },
+  {
+    "objectID": "HRTS_Data.html#project-2-revision-snake-graph",
+    "href": "HRTS_Data.html#project-2-revision-snake-graph",
+    "title": "HRTS Data Projects",
+    "section": "",
+    "text": "(Placeholder — no code yet)"
+  },
+  {
+    "objectID": "Home.html",
+    "href": "Home.html",
+    "title": "Home",
+    "section": "",
+    "text": "Hi — I’m Praneet 👋\nWelcome — this site showcases my R projects analyzing data from the Haryana Right to Service Commission (HRTS).\nI use R, ggplot2, and reproducible workflows to explore appeals, service delivery timelines, and governance outcomes.\n\nVisit HRTS Projects for project write-ups and visualizations.\nVisit About to learn more about me."
+  }
+]

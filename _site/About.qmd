@@ -1,0 +1,14 @@
+---
+title: "About"
+---
+
+# About Me
+
+I am an Economics graduate interested in **data analysis, public policy, and governance**.  
+I work with R and ggplot2 to transform public datasets into clear, evidence-based visual stories.
+
+**Quick facts**
+- Location: Haryana / India  
+- Tools: R, ggplot2, dplyr, Quarto  
+- Focus: Service delivery, appeals data, policy analysis
+---

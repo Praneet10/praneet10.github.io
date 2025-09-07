@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Praneet Jaswani"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - text: "Projects"
+        menu:
+          - href: HRTS_Data.qmd
+            text: HRTS Data
+
+format:
+  html:
+    theme: journal
+    toc: true
+    css: styles.css
+
+editor: visual
+
+

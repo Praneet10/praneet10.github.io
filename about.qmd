@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+# About Me
+
+I am an Economics graduate interested in **data analysis, public policy, and governance**.  
+Tools I use: R, ggplot2, dplyr, Quarto.
+
+*(Add email / CV link here when ready.)*
+---

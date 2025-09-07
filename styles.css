@@ -1,0 +1,6 @@
+/* css styles */
+/* styles.css — minimal tweaks */
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.site-title { font-weight:700; }
+.navbar { letter-spacing: 0.2px; }
+.hero { padding: 2.2rem; border-radius: 8px; margin-bottom: 1.2rem; background: linear-gradient(90deg,#f8fafc,#eef2f7); }
