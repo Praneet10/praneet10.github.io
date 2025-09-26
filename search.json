@@ -1,37 +1,37 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an Economics graduate interested in data analysis, public policy, and governance.\nTools I use: R, ggplot2, dplyr, Quarto."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome 👋\nHi, I’m Praneet Jaswani.\nThis site showcases my R projects analyzing data from the Haryana Right to Service Commission (HRTS)."
+    "text": "Welcome\nThis is my personal website, built with Quarto and deployed using GitHub Pages.\nHere I will share my R projects and visualizations."
   },
   {
     "objectID": "HRTS_Data.html",
     "href": "HRTS_Data.html",
     "title": "HRTS Data Projects",
     "section": "",
-    "text": "This page will host my HRTS analyses (plots and write-ups). For now, it’s a placeholder for structure.\n\n\n(Placeholder — no code yet)\n\n\n\n(Placeholder — no code yet)"
+    "text": "Here I showcase analyses and visualizations built with R + ggplot2 on HRTS data.\n\n\n\n(demo coming soon)\n\n\n\n\n(coming soon)"
   },
   {
-    "objectID": "HRTS_Data.html#project-1-appeal-heatmap",
-    "href": "HRTS_Data.html#project-1-appeal-heatmap",
+    "objectID": "HRTS_Data.html#project-1-appeals-heatmap",
+    "href": "HRTS_Data.html#project-1-appeals-heatmap",
     "title": "HRTS Data Projects",
     "section": "",
-    "text": "(Placeholder — no code yet)"
+    "text": "(demo coming soon)"
   },
   {
     "objectID": "HRTS_Data.html#project-2-revision-snake-graph",
     "href": "HRTS_Data.html#project-2-revision-snake-graph",
     "title": "HRTS Data Projects",
     "section": "",
-    "text": "(Placeholder — no code yet)"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an Economics graduate interested in data analysis, public policy, and governance.\nTools I use: R, ggplot2, dplyr, Quarto."
+    "text": "(coming soon)"
   }
 ]
