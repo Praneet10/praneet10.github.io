@@ -2,11 +2,8 @@
 title: "Home"
 ---
 
-::: {.hero}
+# Welcome
 
-# Welcome 👋
+This is my personal website, built with **Quarto** and deployed using **GitHub Pages**.  
 
-Hi, I’m **Praneet Jaswani**.\
-This site showcases my R projects analyzing data from the **Haryana Right to Service Commission (HRTS)**.
-
-------------------------------------------------------------------------
+Here I will share my R projects and visualizations.

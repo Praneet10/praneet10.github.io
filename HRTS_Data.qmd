@@ -1,17 +1,20 @@
 ---
 title: "HRTS Data Projects"
+format:
+  html:
+    toc: true
 ---
 
 # Haryana Right to Service Commission (HRTS) Projects
 
-This page will host my HRTS analyses (plots and write-ups). For now, it's a placeholder for structure.
+Here I showcase analyses and visualizations built with **R + ggplot2** on HRTS data.  
 
-## Project 1: Appeal Heatmap
+---
 
-*(Placeholder — no code yet)*
+## Project 1: Appeals Heatmap
+*(demo coming soon)*
+
+---
 
 ## Project 2: Revision Snake Graph
-
-*(Placeholder — no code yet)*
-
-------------------------------------------------------------------------
+*(coming soon)*
