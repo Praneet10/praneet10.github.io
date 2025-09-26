@@ -18,7 +18,7 @@
     "href": "HRTS_Data.html",
     "title": "HRTS Data Projects",
     "section": "",
-    "text": "Here I showcase analyses and visualizations built with R + ggplot2 on HRTS data.\n\n\n\n(demo coming soon)\n\n\n\n\n(coming soon)"
+    "text": "Here I showcase analyses and visualizations built with R + ggplot2 on HRTS data.\n\n\n\n(demo coming soon)\n\n\n\n\nlibrary(ggplot2) library(dplyr) library(readxl) library(lubridate) library(RColorBrewer)"
   },
   {
     "objectID": "HRTS_Data.html#project-1-appeals-heatmap",
@@ -32,6 +32,6 @@
     "href": "HRTS_Data.html#project-2-revision-snake-graph",
     "title": "HRTS Data Projects",
     "section": "",
-    "text": "(coming soon)"
+    "text": "library(ggplot2) library(dplyr) library(readxl) library(lubridate) library(RColorBrewer)"
   }
 ]

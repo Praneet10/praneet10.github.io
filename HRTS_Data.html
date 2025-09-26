@@ -132,6 +132,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#project-1-appeals-heatmap" id="toc-project-1-appeals-heatmap" class="nav-link" data-scroll-target="#project-1-appeals-heatmap">Project 1: Appeals Heatmap</a></li>
   <li><a href="#project-2-revision-snake-graph" id="toc-project-2-revision-snake-graph" class="nav-link" data-scroll-target="#project-2-revision-snake-graph">Project 2: Revision Snake Graph</a></li>
   </ul></li>
+  <li><a href="#load-the-excel-file-from-repo-not-desktop" id="toc-load-the-excel-file-from-repo-not-desktop" class="nav-link" data-scroll-target="#load-the-excel-file-from-repo-not-desktop">Load the Excel file from repo (not Desktop)</a></li>
+  <li><a href="#merge-dhbvn-uhbvn-into-energy-format-month-compute-cumulative" id="toc-merge-dhbvn-uhbvn-into-energy-format-month-compute-cumulative" class="nav-link" data-scroll-target="#merge-dhbvn-uhbvn-into-energy-format-month-compute-cumulative">Merge DHBVN + UHBVN into “Energy”, format Month, compute cumulative</a></li>
+  <li><a href="#static-snake-graph" id="toc-static-snake-graph" class="nav-link" data-scroll-target="#static-snake-graph">Static snake graph</a></li>
   </ul>
 </nav>
     </div>
@@ -168,10 +171,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="project-2-revision-snake-graph" class="level2">
 <h2 class="anchored" data-anchor-id="project-2-revision-snake-graph">Project 2: Revision Snake Graph</h2>
-<p><em>(coming soon)</em></p>
-
-
+<p>library(ggplot2) library(dplyr) library(readxl) library(lubridate) library(RColorBrewer)</p>
 </section>
+</section>
+<section id="load-the-excel-file-from-repo-not-desktop" class="level1">
+<h1>Load the Excel file from repo (not Desktop)</h1>
+<p>df &lt;- read_excel(“data/Department_Top5_MonthWise.xlsx”)</p>
+</section>
+<section id="merge-dhbvn-uhbvn-into-energy-format-month-compute-cumulative" class="level1">
+<h1>Merge DHBVN + UHBVN into “Energy”, format Month, compute cumulative</h1>
+<p>DTFM_Date &lt;- df %&gt;% mutate( Department = case_when( Department %in% c(“Dakshin Haryana Bijli Vitran Nigam-DHBVN”, “Uttar Haryana Bijli Vitran Nigam-UHBVN”) ~ “Energy”, TRUE ~ Department ), Month = as.Date(paste0(“01”, Month), format = “%d %b %Y”), Revisions_Received = as.numeric(Revisions_Received) ) %&gt;% arrange(Department, Month) %&gt;% group_by(Department) %&gt;% mutate(Cumulative_Revisions = cumsum(Revisions_Received)) %&gt;% ungroup()</p>
+</section>
+<section id="static-snake-graph" class="level1">
+<h1>Static snake graph</h1>
+<p>ggplot(DTFM_Date, aes(x = Month, y = Cumulative_Revisions, color = Department)) + geom_line(linewidth = 1.5) + geom_point(size = 3) + geom_text(aes(label = scales::number(Cumulative_Revisions, accuracy = 1)), vjust = -0.8, size = 3.5, fontface=“bold”) + scale_x_date(date_labels = “%b%Y”, date_breaks = “1 month”) + scale_color_brewer(palette = “Set2”, name = ““) + labs( title =”Cumulative Revisions Received by Department”, subtitle = “August 2024 – July 2025”, x = “Month”, y = “Cumulative Revisions” ) + theme_minimal() + theme( axis.text.x = element_text(angle = 0, hjust = 0.5), panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(), legend.title = element_blank(), plot.title = element_text(size = 16, face = “bold”, hjust = 0.5), plot.subtitle = element_text(size = 12, hjust = 0.5), plot.background = element_rect(fill = “white”, color = NA), panel.background = element_rect(fill = “white”, color = NA) )</p>
+
+
 </section>
 
 </main> <!-- /main -->
