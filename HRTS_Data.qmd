@@ -17,4 +17,56 @@ Here I showcase analyses and visualizations built with **R + ggplot2** on HRTS d
 ---
 
 ## Project 2: Revision Snake Graph
-*(coming soon)*
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(readxl)
+library(lubridate)
+library(RColorBrewer)
+
+# Load the Excel file from repo (not Desktop)
+df <- read_excel("data/Department_Top5_MonthWise.xlsx")
+
+# Merge DHBVN + UHBVN into "Energy", format Month, compute cumulative
+DTFM_Date <- df %>%
+  mutate(
+    Department = case_when(
+      Department %in% c("Dakshin Haryana Bijli Vitran Nigam-DHBVN",
+                        "Uttar Haryana Bijli Vitran Nigam-UHBVN") ~ "Energy",
+      TRUE ~ Department
+    ),
+    Month = as.Date(paste0("01 ", Month), format = "%d %b %Y"),
+    Revisions_Received = as.numeric(Revisions_Received)
+  ) %>%
+  arrange(Department, Month) %>%
+  group_by(Department) %>%
+  mutate(Cumulative_Revisions = cumsum(Revisions_Received)) %>%
+  ungroup()
+
+# Static snake graph
+ggplot(DTFM_Date, aes(x = Month, y = Cumulative_Revisions, color = Department)) +
+  geom_line(linewidth = 1.5) +
+  geom_point(size = 3) +
+  geom_text(aes(label = scales::number(Cumulative_Revisions, accuracy = 1)),
+            vjust = -0.8, size = 3.5, fontface="bold") +
+  scale_x_date(date_labels = "%b\n%Y", date_breaks = "1 month") +
+  scale_color_brewer(palette = "Set2", name = "") +
+  labs(
+    title = "Cumulative Revisions Received by Department", 
+    subtitle = "August 2024 – July 2025",
+    x = "Month",
+    y = "Cumulative Revisions"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    legend.title = element_blank(),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    plot.background = element_rect(fill = "white", color = NA),
+    panel.background = element_rect(fill = "white", color = NA)
+  )
+

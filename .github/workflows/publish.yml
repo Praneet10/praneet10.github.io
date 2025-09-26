@@ -24,7 +24,7 @@ jobs:
 
       - name: Install needed R packages
         run: |
-          Rscript -e 'options(repos="https://cloud.r-project.org"); pkgs <- c("ggplot2","dplyr"); install.packages(pkgs[!(pkgs %in% installed.packages()[,"Package"])])'
+         Rscript -e 'options(repos="https://cloud.r-project.org"); pkgs <- c("ggplot2","dplyr"); install.packages(pkgs[!(pkgs %in% installed.packages()[,"Package"])])'
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
